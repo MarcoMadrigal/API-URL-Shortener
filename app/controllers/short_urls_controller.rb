@@ -4,6 +4,8 @@ class ShortUrlsController < ApplicationController
   skip_before_action :verify_authenticity_token
 
   def index
+    @test = ShortUrl.all
+    render json: @test
   end
 
   def create
